@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Hangman</h1>
+    <div class="game-container">
+        <div class="hangman-box">
+            <canvas id="hangman-canvas" width="200" height="250"></canvas>
+        </div>
+        <div class="game-box">
+            <div id="word-display"></div>
+            <p>Guesses left: <span id="guesses-left">6</span></p>
+            <div id="keyboard"></div>
+        </div>
+    </div>
+
+    <!-- Final Message Popup -->
+    <div class="popup-container" id="popup-container">
+        <div class="popup">
+            <h2 id="final-message"></h2>
+            <p id="correct-word"></p>
+            <button id="play-again-button">Play Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

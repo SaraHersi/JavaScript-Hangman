@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #34495e;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 3em;
+    letter-spacing: 2px;
+}
+
+.game-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    align-items: flex-end;
+    padding: 20px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.game-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#word-display {
+    font-size: 2.5em;
+    letter-spacing: 10px;
+    margin-bottom: 20px;
+    min-height: 50px;
+}
+
+#guesses-left {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+#keyboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+    gap: 5px;
+    max-width: 500px;
+    margin: 20px 0;
+}
+
+.key {
+    background-color: #fff;
+    color: #34495e;
+    border: none;
+    font-size: 1.2em;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.key:hover:not(:disabled) {
+    background-color: #2980b9;
+    color: #fff;
+}
+
+.key:disabled {
+    background-color: #95a5a6;
+    color: #ecf0f1;
+    cursor: not-allowed;
+}
+
+#play-again-button {
+    background-color: #2980b9;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#play-again-button:hover {
+    background-color: #3498db;
+}
+
+.popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none; 
+    align-items: center;
+    justify-content: center;
+}
+
+.popup {
+    background-color: #2c3e50;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#final-message {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+#correct-word {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
